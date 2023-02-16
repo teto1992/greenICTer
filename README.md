@@ -34,7 +34,7 @@ powerForActivePorts([P|Ps], D, R) :-
 powerForActivePorts([], _, 0).
 ```
 
-that give a type and the associated parameters of a piece of equipment to compute the absorbed Power according to some predefined model (the above is taken from [Reviriego et al. (2012)][https://ieeexplore.ieee.org/iel5/6260982/6266874/06266897.pdf]).
+that give a type and the associated parameters of a piece of equipment to compute the absorbed Power according to some predefined model (the above is taken from [Reviriego et al. (2012)](https://ieeexplore.ieee.org/iel5/6260982/6266874/06266897.pdf).
 
 Last, the model enables specifying the lifecycle duration (in years), the average carbon intensity associated to the design and production, usage, and end-of-life steps and the energetic cost of energy transport as in:
 
@@ -54,7 +54,7 @@ transport(_, 0.95). % energetic cost of energy transport
 
 To run the prototype and assess the ecological footprint of your ICT systems:
 
-1. Download and install [SWI-Prolog]https://www.swi-prolog.org/download/stable)
+1. Download and install [SWI-Prolog](https://www.swi-prolog.org/download/stable)
 2. Open a terminal and issue the command `swipl main.pl` from the root directory of the project
 3. Query the Prolog engine by issueing queries like:
 
