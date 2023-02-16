@@ -1,3 +1,8 @@
+<p><img align="left"  src="https://github.com/di-unipi-socc/fogCutter/blob/main/logo/png/logo-no-background.png?raw=true " width="300"> </p>
+
+<br></br>
+_A logic programming solution to assess the ecological footprint of your ICT system_
+
 This prototype implements a simplified version of the model by [Drouant et al. (2014)](https://www.sciencedirect.com/science/article/pii/S0140366414000218) to estimate energy consumption and carbon emission of ICT systems. It is entirely written in the declarative logic programming language Prolog, which makes very readable and concise (the core of the prototype is less than 50 lines of code).
 
 # Model
@@ -25,7 +30,7 @@ and its power profile via predicates like
 % powerProfile(TypeAndParams, Power).
 powerProfile((switch, TotalPorts, ActivePortLoads, IdlePower, ActivePortPower, IdlePortPower), P) :-
     switchPowerIncrement(D), powerForActivePorts(ActivePortLoads, D, PowerIncrement),
-    length(ActivePortLoads, ActivePorts), IdlePorts is TotalPorts - ActivePorts,        % number of idle ports
+    length(ActivePortLoads, ActivePorts), IdlePorts is TotalPorts - ActivePorts,     
     P is IdlePower + PowerIncrement * ActivePortPower + IdlePorts * IdlePortPower.
 
 powerForActivePorts([P|Ps], D, R) :-
@@ -36,17 +41,17 @@ powerForActivePorts([], _, 0).
 
 that give a type and the associated parameters of a piece of equipment to compute the absorbed Power according to some predefined model (the above is taken from [Reviriego et al. (2012)](https://ieeexplore.ieee.org/iel5/6260982/6266874/06266897.pdf)).
 
-Last, the model enables specifying the lifecycle duration (in years), the average carbon intensity associated to the design and production, usage, and end-of-life steps and the energetic cost of energy transport as in:
+Last, the model enables specifying the lifecycle duration, the average carbon intensity associated to the design and production, usage, and end-of-life steps and the energetic cost of energy transport as in:
 
 ```prolog
 
 lifecycle(3). % lifecycle(Years).
 
-carbonIntensity(i, 0.389). % carbonIntensity(kgCO2/kWh).
+carbonIntensity(i, 0.389). % carbonIntensity(i/u/f, kgCO2/kWh).
 carbonIntensity(u, 0.389). 
 carbonIntensity(f, 0.389). 
 
-transport(_, 0.95). % energetic cost of energy transport
+transport(_, 0.95). % transport(i/u/f, T) 
 
 ```
 
@@ -74,5 +79,4 @@ Carbon emissions: 1804.3 kgCO2-eq
          Ci = 615.4
          Cu = 860.9
          Cf = 328.0
-true .
 ```
