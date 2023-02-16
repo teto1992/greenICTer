@@ -59,9 +59,10 @@ transport(_, 0.95). % transport(i/u/f, T)
 
 To run the prototype and assess the ecological footprint of your ICT systems:
 
-1. Download and install [SWI-Prolog](https://www.swi-prolog.org/download/stable)
-2. Open a terminal and issue the command `swipl main.pl` from the root directory of the project
-3. Query the Prolog engine by issueing queries like:
+1. Clone this repository
+2. Download and install [SWI-Prolog](https://www.swi-prolog.org/download/stable)
+3. Open a terminal and issue the command `swipl main.pl` from the root directory of the cloned project
+4. Query the Prolog engine by issueing queries like:
 
 ```prolog
 ?- systemAssessment(system1).
