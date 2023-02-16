@@ -34,7 +34,7 @@ powerForActivePorts([P|Ps], D, R) :-
 powerForActivePorts([], _, 0).
 ```
 
-that give a type and the associated parameters of a piece of equipment to compute the absorbed Power according to some predefined model (the above is taken from [Reviriego et al. (2012)](https://ieeexplore.ieee.org/iel5/6260982/6266874/06266897.pdf).
+that give a type and the associated parameters of a piece of equipment to compute the absorbed Power according to some predefined model (the above is taken from [Reviriego et al. (2012)](https://ieeexplore.ieee.org/iel5/6260982/6266874/06266897.pdf)).
 
 Last, the model enables specifying the lifecycle duration (in years), the average carbon intensity associated to the design and production, usage, and end-of-life steps and the energetic cost of energy transport as in:
 
