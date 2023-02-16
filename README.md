@@ -1,4 +1,4 @@
-<p><img align="left"  src="https://github.com/di-unipi-socc/fogCutter/blob/main/logo/png/logo-no-background.png?raw=true " width="300"> </p>
+<p><img align="left"  src="https://github.com/teto1992/greenICTAssessment/blob/master/logo/png/logo-no-background.png?raw=true" width="300"> </p>
 
 <br></br>
 _A logic programming solution to assess the ecological footprint of your ICT system_
