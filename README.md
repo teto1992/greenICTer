@@ -3,7 +3,7 @@
 <br></br>
 _A logic programming solution to assess the ecological footprint of your ICT system_
 
-This prototype implements a simplified version of the model by [Drouant et al. (2014)](https://www.sciencedirect.com/science/article/pii/S0140366414000218) to estimate energy consumption and carbon emission of ICT systems. It is entirely written in the declarative logic programming language Prolog, which makes it very readable and concise (the core of the prototype is less than 50 lines of code).
+This prototype implements a simplified version of the model by [Drouant et al. (2014)](https://www.sciencedirect.com/science/article/pii/S0140366414000218) to estimate energy consumption and carbon emission of ICT systems. It is entirely written in the declarative logic programming language Prolog, which makes it very readable and concise (the core of the prototype is only [42](https://youtu.be/tK0urw144cU) single lines of code).
 
 # Model
 
